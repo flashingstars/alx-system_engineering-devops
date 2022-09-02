@@ -1,1 +1,1 @@
-Scripting in shell
+Scripting in shell, made better with permissions.
