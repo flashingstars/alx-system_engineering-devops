@@ -1,2 +1,2 @@
 #!/bin/bash
-head -3 README.md | tail +3  
+cat ./README.md |head -3 | tail --lines=+3  
