@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Displaying processes that contain the word bash without using the word ps.
+pgrep -l bash
