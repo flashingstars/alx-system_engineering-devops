@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+#Stopping nginx and terminating apache
+sudo service nginx stop
+sudo pkill apache2
+
+#Running as the nginx user
+sudo sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
+
+#Listening on port 8080
+sudo sed -i 's/listen 80 default_server;/listen 8080 default_server;/' /etc/nginx/sites-available/default
+sudo sed -i 's/listen \[::\]:80/listen \[::\]:8080/' /etc/nginx/sites-available/default
+
+#Testing nginx server without starting to check for syntax errors
+sudo nginx -t
+
+#starting nginx
+sudo service nginx start
