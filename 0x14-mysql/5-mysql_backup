@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Creating an archive backup for all databases
+
+password=$1
+file=$(date +%d-%m-%Y).tar.gz
+
+mysqldump -uroot -p"$password" --all-databases > backup.sql
+tar -czf "$file" backup.sql
+tar -tf "$file"
