@@ -21,6 +21,7 @@ if __name__ == "__main__":
             if item.get("completed") is True:
                 all_completed += 1
                 complete_titles.append(item.get("title"))
-    print("Employee {} is done with tasks({}/{}):".format(user_name, all_completed, all_todo))
+    print("Employee {} is done with tasks({}/{}):".format(
+        user_name, all_completed, all_todo))
     for title in complete_titles:
         print("\t {}".format(title))
