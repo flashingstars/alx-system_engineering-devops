@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-""" Fetching JSON data from API """
+""" Fetching JSON data from  API and displaying all """
 
 import json
 import requests
 
+
 if __name__ == "__main__":
     user_url = "https://jsonplaceholder.typicode.com/users/"
     user_dict = requests.get(user_url).json()
-    file1_name = "todo_all_amployees.json"
+    file1_name = "todo_all_employees.json"
     the_dict = {}
 
     for elem in user_dict:
