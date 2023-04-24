@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for elem in todo_user:
         in_dict = {}
         in_dict["task"] = elem.get("title")
-        in_dict["completed"] =  elem.get("completed")
+        in_dict["completed"] = elem.get("completed")
         in_dict["username"] = user_name
         the_dict.get(user_id).append(in_dict)
 
