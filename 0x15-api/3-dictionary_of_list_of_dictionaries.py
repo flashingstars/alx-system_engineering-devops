@@ -13,7 +13,7 @@ if __name__ == "__main__":
     for elem in user_dict:
         name = elem.get("username")
         user_id = str(elem.get("id"))
-        user_data = requests.get("{}/{}/todos".format(user_url, user_id))
+        user_data = requests.get("{}{}/todos".format(user_url, user_id))
         user_data = user_data.json()
         the_dict[user_id] = []
         for item in user_data:
